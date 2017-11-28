@@ -27,18 +27,39 @@
 
   function start () {
   canvas.prepare();
-  var rect1 = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
-  var circ1 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*5)/6, (canvas.getHeight()/6));
-  var circ2 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*5.2)/9, (canvas.getHeight()/9));
-  var circ3 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*10.6)/27, ((canvas.getHeight()*2)/27));
-  rect1.setColor("blue");
-  circ1.setColor("white");
-  circ2.setColor("red");
-  circ3.setColor("green");
-  canvas.add(rect1);
-  canvas.add(circ1);
-  canvas.add(circ2);
-  canvas.add(circ3);
+  {
+        var winter = readBoolean("Is it winter?");
+           if (winter) {
+    	        println("Yes!");
+    var rect1 = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
+    var circ1 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*5)/6, (canvas.getHeight()/6));
+    var circ2 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*5.2)/9, (canvas.getHeight()/9));
+    var circ3 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*10.6)/27, ((canvas.getHeight()*2)/27));
+    rect1.setColor("blue");
+    circ1.setColor("white");
+    circ2.setColor("white");
+    circ3.setColor("white");
+    canvas.add(rect1);
+    canvas.add(circ1);
+    canvas.add(circ2);
+    canvas.add(circ3);
+           }
+    	else {
+            printIn("No!")
+        }
+    var rect1 = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
+    var circ1 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*5)/6, (canvas.getHeight()/6));
+    var circ2 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*5.2)/9, (canvas.getHeight()/9));
+    var circ3 = new Circle((canvas.getWidth()/2), (canvas.getHeight()*10.6)/27, ((canvas.getHeight()*2)/27));
+    rect1.setColor("blue");
+    circ1.setColor("brown");
+    circ2.setColor("brown");
+    circ3.setColor("brown");
+    canvas.add(rect1);
+    canvas.add(circ1);
+    canvas.add(circ2);
+    canvas.add(circ3);
+  }
   canvas.draw();
 }
 
